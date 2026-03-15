@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Daily Curiosity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1a1a2e; --blue: #1a56a0; --blue-light: #e8f0fb;
+      --accent: #e8734a; --muted: #6b7280; --border: #e5e7eb;
+      --bg: #fafaf8; --white: #ffffff; --max: 780px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--ink); font-size: 16px; line-height: 1.75; }
+
+    /* Header */
+    header { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 2rem; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 12px rgba(0,0,0,0.06); }
+    .header-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .brand-icon { width: 32px; height: 32px; background: var(--blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+    .brand-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; color: var(--ink); }
+    .header-label { font-size: 0.75rem; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg, #1a1a2e 0%, #1a56a0 100%); padding: 5rem 2rem 4rem; text-align: center; }
+    .hero-inner { max-width: var(--max); margin: 0 auto; }
+    .hero-badge { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.9); font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.35em 0.9em; border-radius: 999px; margin-bottom: 1.5rem; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 1rem; }
+    .hero-sub { color: rgba(255,255,255,0.65); font-size: 0.95rem; font-weight: 300; }
+    .hero-dates { margin-top: 1.5rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+    .hero-date { color: rgba(255,255,255,0.5); font-size: 0.8rem; }
+    .hero-date strong { color: rgba(255,255,255,0.85); font-weight: 500; }
+
+    /* ToC */
+    .toc-wrap { margin: 3rem auto 0; max-width: var(--max); padding: 0 2rem; }
+    .toc { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; }
+    .toc-title { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.85rem; }
+    .toc ol { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.3rem 2rem; }
+    @media (max-width: 540px) { .toc ol { grid-template-columns: 1fr; } }
+    .toc a { color: var(--blue); text-decoration: none; font-size: 0.875rem; display: flex; align-items: center; gap: 0.5rem; transition: color 0.15s; }
+    .toc a:hover { color: var(--accent); }
+    .toc-num { color: var(--muted); font-size: 0.75rem; min-width: 1.2em; }
+
+    /* Main */
+    main { padding: 3.5rem 0 5rem; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
+
+    /* Sections */
+    .section { margin-bottom: 3rem; }
+    .section-header { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem; }
+    .section-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--blue-light); color: var(--blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 600; margin-top: 3px; }
+    .section h2 { font-family: 'Playfair Display', serif; font-size: 1.45rem; font-weight: 600; color: var(--ink); line-height: 1.25; }
+    .section h3 { font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: var(--blue); margin: 1.5rem 0 0.6rem; }
+
+    p { color: var(--muted); margin-bottom: 0.85rem; font-weight: 300; }
+    p:last-child { margin-bottom: 0; }
+    a { color: var(--blue); }
+    a:hover { color: var(--accent); }
+
+    ul { list-style: none; margin: 0.5rem 0 1rem; display: flex; flex-direction: column; gap: 0.45rem; }
+    ul li { display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.925rem; color: var(--muted); font-weight: 300; }
+    ul li::before { content: '\2192'; color: var(--accent); font-size: 0.85rem; flex-shrink: 0; margin-top: 0.15em; }
+
+    /* Callouts */
+    .callout { background: var(--blue-light); border-left: 3px solid var(--blue); border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1rem 0; }
+    .callout p { color: #1e3a5f; font-weight: 400; margin: 0; font-size: 0.9rem; }
+    .callout-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue); margin-bottom: 0.4rem; }
+    .warning { background: #fff7ed; border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1rem 0; }
+    .warning p { color: #7c3d12; font-weight: 400; margin: 0; font-size: 0.9rem; }
+    .warning .callout-label { color: var(--accent); }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+
+    /* Device grid */
+    .device-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+    @media (max-width: 520px) { .device-grid { grid-template-columns: 1fr; } }
+    .device-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.25rem; }
+    .device-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.5rem; }
+    .device-card ul { margin: 0; gap: 0.35rem; }
+    .device-card li { font-size: 0.85rem; }
+
+    /* Contact */
+    .contact-box { background: var(--ink); border-radius: 14px; padding: 2rem; }
+    .contact-box h2 { font-family: 'Playfair Display', serif; color: #fff; font-size: 1.4rem; margin-bottom: 0.5rem; }
+    .contact-box p { color: rgba(255,255,255,0.6); margin-bottom: 1rem; font-weight: 300; }
+    .contact-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.25rem; }
+    .contact-link { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); padding: 0.5em 1.1em; border-radius: 8px; font-size: 0.875rem; text-decoration: none; transition: background 0.15s; }
+    .contact-link:hover { background: rgba(255,255,255,0.14); color: #fff; }
+
+    /* Footer */
+    footer { background: var(--white); border-top: 1px solid var(--border); padding: 1.5rem 2rem; text-align: center; }
+    footer p { font-size: 0.8rem; color: #9ca3af; margin: 0; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="#">
+      <div class="brand-icon">&#x1F52D;</div>
+      <span class="brand-name">Daily Curiosity</span>
+    </a>
+    <span class="header-label">Privacy Policy</span>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <h1>Privacy Policy</h1>
+    <p class="hero-sub">How we handle your data &mdash; and what our ad partner collects.</p>
+    <div class="hero-dates">
+      <span class="hero-date"><strong>Effective:</strong> March 15, 2026</span>
+      <span class="hero-date"><strong>Last Updated:</strong> March 15, 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="toc-wrap">
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#s1"><span class="toc-num">1.</span> Introduction</a></li>
+      <li><a href="#s2"><span class="toc-num">2.</span> Information We Collect</a></li>
+      <li><a href="#s3"><span class="toc-num">3.</span> Advertising &mdash; Google AdMob</a></li>
+      <li><a href="#s4"><span class="toc-num">4.</span> Children's Privacy (COPPA)</a></li>
+      <li><a href="#s5"><span class="toc-num">5.</span> Third-Party Links</a></li>
+      <li><a href="#s6"><span class="toc-num">6.</span> Data Security</a></li>
+      <li><a href="#s7"><span class="toc-num">7.</span> Your Privacy Rights</a></li>
+      <li><a href="#s8"><span class="toc-num">8.</span> Changes to This Policy</a></li>
+      <li><a href="#s9"><span class="toc-num">9.</span> Contact Us</a></li>
+    </ol>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+
+    <div class="section" id="s1">
+      <div class="section-header">
+        <div class="section-num">1</div>
+        <h2>Introduction</h2>
+      </div>
+      <p>Welcome to Daily Curiosity (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;). We are committed to protecting the privacy of all our users, including children. This Privacy Policy describes our data practices and how third-party advertising (Google AdMob) may interact with users of our app.</p>
+      <p>Daily Curiosity is a family-friendly app designed for users of all ages, including children under 13. We take our obligations under the Children&rsquo;s Online Privacy Protection Act (COPPA) and other applicable privacy laws seriously.</p>
+    </div>
+
+    <hr />
+
+    <div class="section" id="s2">
+      <div class="section-header">
+        <div class="section-num">2</div>
+        <h2>Information We Collect Directly</h2>
+      </div>
+      <div class="callout">
+        <div class="callout-label">&#10003; Our Commitment</div>
+        <p>Daily Curiosity does <strong>not</strong> directly collect, store, or process any personal information from its users. We do not require account registration, and we do not ask for your name, email address, location, or any other personal data.</p>
+      </div>
+      <p>The app does not use cookies, analytics SDKs, or any tracking technology of our own.</p>
+    </div>
+
+    <hr />
+
+    <div class="section" id="s3">
+      <div class="section-header">
+        <div class="section-num">3</div>
+        <h2>Advertising &mdash; Google AdMob</h2>
+      </div>
+      <p>Daily Curiosity displays advertisements served by Google AdMob, a third-party advertising network operated by Google LLC. While we do not collect personal data ourselves, AdMob may collect certain information automatically when ads are displayed in the app.</p>
+      <h3>What AdMob May Collect</h3>
+      <ul>
+        <li>Advertising ID (IDFA on iOS / GAID on Android) &mdash; a resettable, non-permanent device identifier</li>
+        <li>IP address (used to infer general location for ad targeting)</li>
+        <li>Device information (model, OS version, screen size)</li>
+        <li>Ad interaction data (impressions, clicks, view duration)</li>
+        <li>Diagnostic and performance data</li>
+      </ul>
+      <h3>How AdMob Uses This Data</h3>
+      <p>Google AdMob uses the data it collects to serve relevant advertisements, measure ad performance, and prevent ad fraud. AdMob&rsquo;s data practices are governed by Google&rsquo;s Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
+      <h3>COPPA &mdash; Child-Directed Advertising</h3>
+      <p>Because Daily Curiosity is available to users of all ages, including children under 13, we have configured AdMob to serve <strong>non-personalized, child-directed ads</strong> in compliance with COPPA and Google&rsquo;s Families Policy. This means:</p>
+      <ul>
+        <li>Ads shown in this app are not based on behavioral profiling or personal interest targeting</li>
+        <li>AdMob does not use persistent identifiers to track children across apps or websites</li>
+        <li>Ads are contextual only and suitable for general audiences</li>
+      </ul>
+      <p style="margin-top:0.75rem;">More info: <a href="https://support.google.com/admob/answer/6223431" target="_blank" rel="noopener">Google AdMob COPPA guidance</a></p>
+    </div>
+
+    <hr />
+
+    <div class="section" id="s4">
+      <div class="section-header">
+        <div class="section-num">4</div>
+        <h2>Children's Privacy (COPPA)</h2>
+      </div>
+      <div class="warning">
+        <div class="callout-label">&#9873; For Parents &amp; Guardians</div>
+        <p>If you believe we have inadvertently collected personal information from a child under 13, please contact us immediately. We will take prompt action to delete such information.</p>
+      </div>
+      <p>We are fully committed to complying with the Children&rsquo;s Online Privacy Protection Act (COPPA). Specifically:</p>
+      <ul>
+        <li>We do not knowingly collect personal information from children under 13</li>
+        <li>We do not require children to disclose more information than is reasonably necessary to use the app</li>
+        <li>We have configured all third-party SDKs, including AdMob, to operate in child-directed mode</li>
+        <li>We do not share children&rsquo;s data with third parties for commercial purposes</li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <div class="section" id="s5">
+      <div class="section-header">
+        <div class="section-num">5</div>
+        <h2>Third-Party Links and Content</h2>
+      </div>
+      <p>The app may display content or links to third-party websites. We are not responsible for the privacy practices of those third parties. We encourage parents and guardians to supervise their children&rsquo;s online activity and review the privacy policies of any third-party sites visited.</p>
+    </div>
+
+    <hr />
+
+    <div class="section" id="s6">
+      <div class="section-header">
+        <div class="section-num">6</div>
+        <h2>Data Security</h2>
+      </div>
+      <p>Since we do not collect personal data, there is no user data stored on our servers to secure. For data handled by AdMob, Google applies industry-standard security measures as described in their Privacy Policy.</p>
+      <p>You can reset your device&rsquo;s advertising ID or opt out of interest-based ads at any time:</p>
+      <div class="device-grid">
+        <div class="device-card">
+          <div class="device-label">iOS</div>
+          <ul>
+            <li>Settings &gt; Privacy &amp; Security &gt; Tracking</li>
+            <li>Settings &gt; Privacy &amp; Security &gt; Apple Advertising</li>
+          </ul>
+        </div>
+        <div class="device-card">
+          <div class="device-label">Android</div>
+          <ul>
+            <li>Settings &gt; Google &gt; Ads &gt; Reset Advertising ID</li>
+            <li>Opt out of Ads Personalization</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="section" id="s7">
+      <div class="section-header">
+        <div class="section-num">7</div>
+        <h2>Your Privacy Rights</h2>
+      </div>
+      <p>Even though we do not collect personal data, you may have rights regarding data collected by AdMob. You can exercise those rights directly with Google:</p>
+      <ul>
+        <li>Opt out of personalized ads via your device settings (see Section 6 above)</li>
+        <li>Reset or delete your device&rsquo;s advertising identifier at any time</li>
+        <li>Submit data requests to Google at: <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">myaccount.google.com/data-and-privacy</a></li>
+      </ul>
+      <p>Residents of California (CCPA), the European Economic Area (GDPR), and other jurisdictions with applicable privacy laws may have additional rights. Please contact us or Google directly to exercise these rights.</p>
+    </div>
+
+    <hr />
+
+    <div class="section" id="s8">
+      <div class="section-header">
+        <div class="section-num">8</div>
+        <h2>Changes to This Privacy Policy</h2>
+      </div>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. We will post the updated policy within the app and update the effective date above. We encourage you to review this policy periodically. Your continued use of the app after changes are posted constitutes acceptance of the updated policy.</p>
+    </div>
+
+    <hr />
+
+    <div class="section" id="s9">
+      <div class="contact-box">
+        <h2>Contact Us</h2>
+        <p>Questions about this Privacy Policy, our data practices, or COPPA-related requests from parents or guardians? We&rsquo;re here to help.</p>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:priyanshudev@zohomail.in">&#9993; priyanshudev@zohomail.in</a>
+         
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Daily Curiosity. All rights reserved. &nbsp;&middot;&nbsp; This page is for informational purposes only and does not constitute legal advice.</p>
+</footer>
+
+</body>
+</html>
